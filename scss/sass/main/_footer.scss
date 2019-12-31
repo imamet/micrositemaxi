@@ -1,0 +1,68 @@
+footer{	
+	//margin-top: 40px;
+    background: rgba(43, 53, 148, 0.8);
+	position: relative;
+	overflow: hidden;
+	color: $white;
+	text-align: center;
+	padding: 25px 10px;
+    
+    @include max-responsive($sm){
+        padding: 15px 10px;
+    }
+
+    &.footer__homepage{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+
+        @include max-responsive($sm){
+            position: relative;
+        }
+
+        @include range-responsive($sm,$xlg){
+            position: relative;
+        }
+
+    }
+
+    .copyright{
+        margin-top: 10px;
+    }
+
+    .contact li {
+        text-align: right;
+        margin: 0px 12px;
+    }
+    .business{
+         @include max-responsive($sm){
+            display: block;
+            text-align: center !important;
+            margin: 10px auto !important;
+        }
+    }
+}
+
+.back-top {
+    background: $blue;
+    border-radius: 50%;
+    padding: 10px;
+    position: fixed;
+    z-index: 9999;
+    bottom: 10px;
+    right: 10px;
+    color: $white;
+    @include transition_slow(all);
+    display: none;
+
+    &:hover{
+    	background: $blue_solid;
+    };
+
+    img{
+    	width: 20px;
+    }
+}

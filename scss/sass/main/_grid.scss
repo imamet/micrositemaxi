@@ -1,0 +1,53 @@
+/*–––––––––––––LAYOUT–––––––––––––*/
+[class*=col]{
+	//float:left;
+	//position:relative;
+	//padding-left:20px;
+	@include min-responsive($md){
+		//margin-left:0;
+	}
+	@include min-responsive($lg){
+		//margin-left:20px;
+	}
+}
+
+.col-x{width: auto;}
+.col-1{width:150px}
+.col-2{width:230px}
+.col-3fix{
+	width:300px; 
+	float: right;
+	margin-left: 0 !important;
+    position: relative;
+}
+.col-3{width:300px}
+.col-4{width:480px}
+.col-5{width:400px}
+.col-read-ad{width: 160px;}
+.col-read{width: /*560px*/ 100% !important;}
+.col-6{width:740px}
+.col-6fix{width:675px;}
+.col-7{width:810px}
+.w100{width:100%}
+.w75{width:75%}
+.w50{width:50%}
+.w25{width:25%}
+
+.container {
+	margin: 0 auto;	
+	//min-width: 320px;
+	
+	
+}
+.container,
+.row,
+.clearfix{
+	&:after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+/*–––––––––––––Clearing–––––––––––––*/
+

@@ -1,0 +1,415 @@
+/*–––––––––––––Utilities–––––––––––––*/
+
+.clearfix:after,
+.clearfix:before,
+.row:after,
+.row:before {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix:after,
+.row:after {
+    clear: both;
+}
+
+.display-table {
+    display: table;
+    @include display_full();
+    position: relative;
+    z-index: 1;
+}
+
+.display-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    @include display_full();
+}
+
+.center {
+    float: none !important;
+    margin: 0 auto !important;
+    text-align: center;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.top {
+    display: table-cell;
+    vertical-align: top
+}
+
+.bottom {
+    display: table-cell;
+    vertical-align: bottom
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    text-align: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.affix {
+    position: fixed;
+}
+
+//text position
+.text-left {
+    text-align: left !important
+}
+
+.text-right {
+    text-align: right !important
+}
+
+.text-center {
+    text-align: center !important
+}
+
+//margin padding
+.mt1 {
+    margin-top: 10px!important
+}
+
+.mb1 {
+    margin-bottom: 10px!important
+}
+
+.mr1 {
+    margin-right: 10px!important
+}
+
+.ml1 {
+    margin-left: 10px!important
+}
+
+.pt1 {
+    padding-top: 10px!important
+}
+
+.pb1 {
+    padding-bottom: 10px!important
+}
+
+.pr1 {
+    padding-right: 10px!important
+}
+
+.pl1 {
+    padding-left: 10px!important
+}
+
+.mt2 {
+    margin-top: 20px!important
+}
+
+.mt3 {
+    margin-top: 30px!important
+}
+
+.mt4 {
+    margin-top: 40px!important
+}
+
+.mb2 {
+    margin-bottom: 20px!important
+}
+
+.mb4 {
+    margin-bottom: 40px!important
+}
+
+.mr2 {
+    margin-right: 20px!important
+}
+
+.ml2 {
+    margin-left: 20px!important
+}
+
+.pt2 {
+    padding-top: 20px!important
+}
+
+.pb2 {
+    padding-bottom: 20px!important
+}
+
+.pr2 {
+    padding-right: 20px!important
+}
+
+.pl2 {
+    padding-left: 20px!important
+}
+
+.bolt {
+    font-weight: bold;
+}
+
+.mb22 {
+    margin-bottom: 15%;
+}
+
+//offset
+.offset {
+    padding: 0;
+}
+
+.offset-10 {
+    padding: 0 10px !important;
+}
+
+.offset-25 {
+    padding: 0 25 !important;
+}
+
+//parallax
+.parallax {
+    width: 100%;
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    background-attachment: fixed;
+}
+
+.container__full {
+    height: 100%;
+}
+
+.full__height {
+    height: 100vh !important;
+    @include max-responsive($md) {
+        height: auto !important;
+    }
+}
+
+.full__height1 {
+    height: 100vh !important;
+}
+
+@include min-responsive($xlg) {
+    .full__height__desktop {
+        height: 100vh !important;
+    }
+}
+
+
+/* Responsive Embed */
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-embed iframe,
+.video-embed object,
+.video-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// 4.3 Modal Popup
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    border: 1px solid #fff;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+    @include max-responsive($sm) {
+        padding-top: 130px;
+    }
+    &__title {
+        text-align: center;
+        color: black;
+        font-size: 32px;
+        line-height: 1.9em;
+        padding-left: 10px;
+        font-weight: 700;
+        position: relative;
+        @include max-responsive($sm) {
+            font-size: 2em;
+            margin-bottom: 15%;
+            margin-top: -15%;
+            display: none;
+        }
+    }
+    &__titlemobile {
+        color: #000;
+        padding-bottom: 10%;
+        table {
+            width: 100%;
+        }
+        display: none;
+        @include max-responsive($sm) {
+            display: block;
+        }
+        &--1 {
+            width: 10%;
+        }
+        &--2 {
+            width: 80%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        &--3 {
+            width: 10%;
+        }
+    }
+    &__content {
+        position: relative;
+        margin: auto;
+        width: 40%;
+        border-radius: 30px;
+        background-size: cover;
+        background-position: center center;
+        background: url(http://cdn3.tstatic.net/ads/gridoto/microsite/maxiday/13122019/images/bg-modal.png) no-repeat;
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        @include max-responsive($sm) {
+            width: 97%;
+            padding: 30px;
+        }
+    }
+    &__body {
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        padding: 25px;
+        @include max-responsive($sm) {
+            padding: 2px 0px;
+        }
+        &--2 {
+            position: relative;
+            color: black;
+            border-radius: 100px;
+            text-align: center;
+            &--icon2 {
+                position: absolute;
+                left: -3%;
+                top: 30%;
+                width: 40px;
+            }
+        }
+    }
+    &__close {
+        color: white;
+        right: 0;
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        background: blue;
+        border-radius: 50%;
+        padding: 2px 14px;
+        font-weight: bold;
+        top: -10px;
+        img {
+            width: 77%;
+        }
+        &:hover,
+         :focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    &__break {
+        border-bottom: 1px solid #fff;
+        margin: 20px auto;
+    }
+}

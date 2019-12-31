@@ -1,0 +1,178 @@
+/* Animation Body */
+/* Init laod animation body */
+@-webkit-keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@-moz-keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@-o-keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+.hidden{
+	display: none !important;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.valign-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.btn {
+    @include transition(0.3s);
+}
+
+.btn-more{
+    text-align: center;
+
+    a{
+        color: $lightblue;
+        font-size: 18px;
+    }
+}
+
+.btn-blue{
+    background: $blue;
+    color: $white;
+    padding: 6px 10px;
+
+    &:hover, &:focus{
+        background: $lightblue;
+        color: $white;
+    }
+}
+
+.btn-white{
+    background: 0 0;
+    border: 2px solid $white;
+    color: $white;
+    padding: 12px 35px;
+    border-radius: 0px;
+    text-transform: capitalize;
+
+    &:hover, &:focus{
+        background: $white;
+        color: $black;
+        cursor: pointer;
+    }
+}
+
+.btn-big{
+    padding: 6px 25px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.btn-small{
+    padding: 4px 20px;
+}
+
+.no-pad{
+    padding: 0px !important;
+}
+
+.flex__wrap{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+
+.centerElement{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.border_btm{
+    border-bottom: 2px solid #999999;
+}
+
+a{
+    @include base_transition(all);
+}
+
+/* Animation */
+
+@-webkit-keyframes movedown {
+    0% {
+        top: -120px;
+        transition: all ease 0.4s;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@-moz-keyframes movedown {
+    0% {
+        top: -120px;
+        transition: all ease 0.4s;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes movedown {
+    0% {
+        top: -120px;
+        transition: all ease 0.4s;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.slick-dots li button:before{
+    font-size: 16px !important;
+    color: $white !important;
+    opacity: 0.65;
+}
+
+.slick-dots li.slick-active button:before{
+    color: $blue !important;
+}
+
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out; 
+    -moz-transition: all 0.15s ease-out; 
+    transition: all 0.15s ease-out;
+}
