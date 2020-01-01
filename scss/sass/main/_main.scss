@@ -823,6 +823,8 @@ section {
         }
     }
     .detail__wrapper {
+        margin-bottom: 10%;
+        height: auto;
         @include max-responsive(500px) {
             .offset {
                 padding: 10px;

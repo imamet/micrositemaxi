@@ -2013,6 +2013,11 @@ section .category__wrapper .item__share {
   color: #fff;
 }
 
+section .detail__wrapper {
+  margin-bottom: 10%;
+  height: auto;
+}
+
 @media (max-width: 500px) {
   section .detail__wrapper .offset {
     padding: 10px;
